@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [FREE CRM Application Test Automation -- Sanity Test Suite]">
+  <test name="FREE CRM Application Test Cases(failed)">
+    <classes>
+      <class name="com.crm.qa.tests.HomePageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyHomePageTitleTest"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.crm.qa.tests.HomePageTest -->
+    </classes>
+  </test> <!-- FREE CRM Application Test Cases(failed) -->
+</suite> <!-- Failed suite [FREE CRM Application Test Automation - Sanity Test Suite] -->
