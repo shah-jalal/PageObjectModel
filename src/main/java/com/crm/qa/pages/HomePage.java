@@ -1,5 +1,6 @@
 package com.crm.qa.pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -55,6 +56,11 @@ public class HomePage extends TestBase {
 		// Mouse-over/Mouse-hover to Contacts Link
 		action.moveToElement(contactsLink).build().perform();
 		newContactLink.click();
+	}
+	
+	public void clickOnNewContact() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", newContactLink);
 	}
 	
 	public boolean verifyCorrectUserName() {

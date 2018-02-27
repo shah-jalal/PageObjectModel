@@ -1,6 +1,7 @@
 package com.crm.qa.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -44,15 +45,26 @@ public class ContactsPage extends TestBase{
 				+ "//preceding-sibling::td[@class='datalistrow']//input[@name='contact_id']")).click();
 	}
 	
+//	public void createNewContacts(String title, String ftName, String ltName, String comp) {
+//		//WebElement option = driver.findElement(By.name("title"));
+//		Select select = new Select(option);
+//		select.selectByVisibleText(title);
+//		
+//		firstName.sendKeys(ftName);
+//		lastName.sendKeys(ltName);
+//		company.sendKeys(comp);
+//		saveBtn.click();
+//	}
+	
 	public void createNewContacts(String title, String ftName, String ltName, String comp) {
-		//WebElement option = driver.findElement(By.name("title"));
 		Select select = new Select(option);
 		select.selectByVisibleText(title);
 		
-		firstName.sendKeys(ftName);
-		lastName.sendKeys(ltName);
-		company.sendKeys(comp);
-		saveBtn.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].setAttribute('value', '" + ftName + "');", firstName);
+		js.executeScript("arguments[0].setAttribute('value', '" + ltName + "');", lastName);
+		js.executeScript("arguments[0].setAttribute('value', '" + comp + "');", company);
+		js.executeScript("arguments[0].click();", saveBtn);
 	}
 
 } //Class -->> ContactsPage
