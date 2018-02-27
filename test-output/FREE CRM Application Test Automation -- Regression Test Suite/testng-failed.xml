@@ -6,13 +6,13 @@
   </listeners>
   <test name="FREE CRM Application Test Cases(failed)">
     <classes>
-      <class name="com.crm.qa.tests.ContactsPageTest">
+      <class name="com.crm.qa.tests.HomePageTest">
         <methods>
           <include name="tearDown"/>
-          <include name="validateCreateNewContact" invocation-numbers="0 1 2"/>
+          <include name="verifyHomePageTitleTest"/>
           <include name="Setup"/>
         </methods>
-      </class> <!-- com.crm.qa.tests.ContactsPageTest -->
+      </class> <!-- com.crm.qa.tests.HomePageTest -->
     </classes>
   </test> <!-- FREE CRM Application Test Cases(failed) -->
 </suite> <!-- Failed suite [FREE CRM Application Test Automation - Regression Test Suite] -->

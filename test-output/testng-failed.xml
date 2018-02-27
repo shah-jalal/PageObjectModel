@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [FREE CRM Application Test Automation -- Sanity Test Suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [FREE CRM Application Test Automation -- Regression Test Suite]">
+  <listeners>
+    <listener class-name="com.qa.ExtentReportListener.ExtentReporterNG"/>
+  </listeners>
   <test name="FREE CRM Application Test Cases(failed)">
     <classes>
       <class name="com.crm.qa.tests.HomePageTest">
@@ -12,4 +15,4 @@
       </class> <!-- com.crm.qa.tests.HomePageTest -->
     </classes>
   </test> <!-- FREE CRM Application Test Cases(failed) -->
-</suite> <!-- Failed suite [FREE CRM Application Test Automation - Sanity Test Suite] -->
+</suite> <!-- Failed suite [FREE CRM Application Test Automation - Regression Test Suite] -->
