@@ -42,13 +42,13 @@ public class ContactsPageTest extends TestBase {
 	
 	@Test(priority=2)
 	public void selectSingleContactsTest(){
-		contactsPage.selectContactsByName("David John");
+		contactsPage.selectContactsByName("David Burton");
 	}
 	
 	@Test(priority=3)
 	public void selectMultipleContactsTest(){
-		contactsPage.selectContactsByName("David John");
-		contactsPage.selectContactsByName("David james");
+		contactsPage.selectContactsByName("David Burton");
+		contactsPage.selectContactsByName("David Davis");
 
 	}
 	

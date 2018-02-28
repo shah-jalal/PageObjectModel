@@ -21,12 +21,13 @@ public class TestBase {
 	
 	public static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
+	public static String config_properties_path = "/src/main/java/com/crm"
+			+ "/qa/config/config.properties";
 
 	public TestBase() {
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+ "/src/main/java/com/crm"
-					+ "/qa/config/config.properties");
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+ config_properties_path);
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
