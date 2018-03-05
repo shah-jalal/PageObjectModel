@@ -40,15 +40,15 @@ public class TestBase {
 	public static void initialization() {
 		String browserName = prop.getProperty("browser");
 		
-		if (browserName.equals("chrome")) {
+		if (browserName.equalsIgnoreCase("chrome")) {
 			//Log.info("browser name: " + prop.get("browser")); //Need to implement this option with Log4j
-			System.setProperty("webdriver.chrome.driver", "/Users/apple/Downloads/Browser_driver/chromedriver");
+			System.setProperty("webdriver.chrome.driver", prop.getProperty("chrome_path"));
 			driver = new ChromeDriver();
 			//Log.info("launched: " + prop.get("browser")); //Need to implement this option with Log4j
 			
-		} else if (browserName.equals("FF")) {
+		} else if (browserName.equalsIgnoreCase("FF")) {
 			//Log.info("browser name: " + prop.get("browser"));
-			System.setProperty("webdriver.gecko.driver", "/Users/apple/Downloads/Browser_driver/geckodriver");
+			System.setProperty("webdriver.gecko.driver", prop.getProperty("firefox_path"));
 			driver = new FirefoxDriver();
 			//Log.info("launched: " + prop.get("browser"); //Need to implement this option with Log4j
 		}

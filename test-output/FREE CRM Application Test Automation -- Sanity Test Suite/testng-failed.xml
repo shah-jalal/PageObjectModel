@@ -5,11 +5,22 @@
     <classes>
       <class name="com.crm.qa.tests.HomePageTest">
         <methods>
+          <include name="verifyCorrectUserNameTest"/>
+          <include name="verifyContactsLinkTest"/>
           <include name="tearDown"/>
           <include name="verifyHomePageTitleTest"/>
           <include name="Setup"/>
         </methods>
       </class> <!-- com.crm.qa.tests.HomePageTest -->
+      <class name="com.crm.qa.tests.LoginPageTest">
+        <methods>
+          <include name="loginPageTitleTest"/>
+          <include name="loginTest"/>
+          <include name="crmLogoImageTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.qa.tests.LoginPageTest -->
     </classes>
   </test> <!-- FREE CRM Application Test Cases(failed) -->
 </suite> <!-- Failed suite [FREE CRM Application Test Automation - Sanity Test Suite] -->

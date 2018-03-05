@@ -3,6 +3,10 @@
 <suite name="FREE CRM Application Test Automation -- Sanity Test Suite">
 
 	<!--Note: This is a Test-Runner for Sanity Testing Testing -->
+	<listeners>
+		<listener class-name="com.qa.ExtentReportListener.ExtentReporterNG"></listener>
+	</listeners>
+
 	<test name="FREE CRM Application Test Cases">
 		<classes>
 			<class name="com.crm.qa.tests.LoginPageTest"></class>
